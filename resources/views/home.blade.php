@@ -4,18 +4,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+            <div>
+              <div class="btn btn-primary pl-5 button-1" style="margin-right: 100px">
+                  Profile
+              </div>
+              <div class="btn btn-primary ">
+                  Add new content
+              </div>
+            </div>
+            <div>
+                I need this to work!
             </div>
         </div>
     </div>
