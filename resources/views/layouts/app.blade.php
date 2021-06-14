@@ -13,23 +13,21 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/css/barstyle.css') }}" />
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
-                    <!-- Branding Image -->
-                    <a class="navbar-brand " href="{{ url('/') }}">
-                        <div><img class="logo1" src="/svg/logo.png" alt="game shop logo on a shield" ></div>
-                        <div>Test change</div>
-                    </a>
-                </div>
+
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <div class="logo1">
+                            <div class="log-elem"><img class="log-img" src="/svg/logo.png" alt="game shop logo on a shield" ></div>
+                            <div class="log-elem log-text">Game-Supply-Dock</div>
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

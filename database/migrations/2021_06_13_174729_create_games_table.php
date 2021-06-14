@@ -20,6 +20,8 @@ class CreateGamesTable extends Migration
             $table->integer('Number of players')->nullable();
             $table->bigInteger('price');
             $table->timestamps();
+
+            $table->index('profile_id');
         });
     }
 

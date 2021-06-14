@@ -6,7 +6,7 @@ html, body {
     height: 100vh;
     margin: 0;
 }
-/* nav bar*/
+/*login*/
 .top-right {
     position: absolute;
     right: 10px;
@@ -21,9 +21,34 @@ html, body {
     text-decoration: none;
     text-transform: uppercase;
 }
+/* nav bar*/
+.nav-bar {
+    display: flex;
+    margin-top: 6vh;
+}
+.nb-elem {
+    display: inline-block;
+    margin-left: 5vw;
+    border: 5px groove lightskyblue;
+    padding: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: 3.5vh;
+}
 /* Main body */
+.main-wel {
+    border-top: 2px solid darkgray;
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+    width: 90vw;
+
+}
 .button-1 {
-    background-color: orange;
+
     color: blue;
 }
  .flex-center {
@@ -35,4 +60,32 @@ html, body {
     display: inline-block;
     padding: 0;
     margin-top: 10vh;
+    margin-left: 5vw;
+}
+.main-cont {
+    display: flex;
+    padding-top: 5vh;
+    min-height: 50vw;
+    max-height: 120vw;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #6b9dbb;
+    flex-wrap: wrap;
+}
+.main-cont-elem {
+    display: inline-block;
+    height: 40vh;
+    width: 15vw;
+    border: 3px solid darkblue;
+    margin: 5vh;
+}
+.main-cont-img {
+    max-width: 15vw;
+    max-height: 30vh;
+    display: block;
+}
+.main-img {
+    width: 15vw;
+    height: 30vh;
+    background-color: red;
 }

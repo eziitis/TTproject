@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/genres', function () {
+    return view('genres');
+});
+
 Auth::routes();
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
