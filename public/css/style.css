@@ -89,3 +89,9 @@ html, body {
     height: 30vh;
     background-color: red;
 }
+
+/* Create form */
+.create-form {
+    margin-top: 10vh;
+    background-color: #6b9dbb;
+}

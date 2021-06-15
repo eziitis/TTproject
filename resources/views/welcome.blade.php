@@ -51,7 +51,7 @@
                     <div class="nb-elem">
                         @if (Route::has('login'))
                             @if (Auth::check())
-                               <a href="{{ url('/profile/{user}') }}">
+                               <a href="{{ url('/profile/'. auth()->user()->id) }}">
                                    Profile
                                </a>
                             @else

@@ -14,7 +14,7 @@
                     Profile
                 </div>
                 <div class="nb-elem">
-                    Add new content
+                    <a href="{{ url('/p/create') }}">Add new content</a>
                 </div>
             </div>
         </div>
