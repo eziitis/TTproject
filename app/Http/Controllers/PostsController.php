@@ -69,7 +69,36 @@ class PostsController extends Controller
             'caption'=> $request['caption'],
             'image'=> $imagePath,
         ]);
-        */
+        $data = request()->validate([
+            'caption' => 'required',
+            'image' => 'required',
+        ]);
+
+        $data = [
+            'caption',
+            'image'
+        ];
+        $imagePath = request('image')->store('uploads','public');
+
+        auth()->user()->posts()->create([
+            'caption'=> $data['caption'],
+            'image'=> $imagePath,
+        ]);
         dd(request()->all());
+        */
+        $this->validate($request, [
+            'caption' => 'required',
+            'image' => 'required'
+        ]);
+
+        $imagePath = request('image')->store('uploads','public');
+
+        $apt = new \App\Post;
+        $apt->user_id = auth()->user()->id;
+        $apt->caption = $request->input('caption');
+        $apt->image = $imagePath;
+        $apt->save();
+
+        return redirect('/profile/'. auth()->user()->id);
     }
 }
