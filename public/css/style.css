@@ -38,6 +38,16 @@ html, body {
     font-weight: bold;
     font-size: 3.5vh;
 }
+.nb-pic {
+    display: inline-block;
+
+}
+/*navigation*/
+.main-but {
+    text-decoration: none;
+}
+
+
 /* Main body */
 .main-wel {
     border-top: 2px solid darkgray;
@@ -67,31 +77,105 @@ html, body {
     padding-top: 5vh;
     min-height: 50vw;
     max-height: 120vw;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    background-color: #6b9dbb;
+    background-color: lightblue;
     flex-wrap: wrap;
+    background-image: url("/background-images/main.png");
 }
 .main-cont-elem {
     display: inline-block;
     height: 40vh;
     width: 15vw;
-    border: 3px solid darkblue;
+    border: 0.5vw ridge deepskyblue;
     margin: 5vh;
 }
+.main-cont-elem.home-elem {
+    height: 43.5vh;
+    width: 16vw;
+}
 .main-cont-img {
-    max-width: 15vw;
+    max-width: 14vw;
     max-height: 30vh;
+    margin: auto;
     display: block;
+
 }
 .main-img {
     width: 15vw;
     height: 30vh;
-    background-color: red;
+    background-color: white;
+    vertical-align: middle;
+
+}
+.main-cont-text {
+    border-top: 0.5vw ridge deepskyblue;
+    background-color: lightblue;
+}
+.main-text {
+    font-weight: bold;
+    color: grey;
+}
+.italic {
+    font-style: italic;
+    color: #1f648b;
+}
+.bb {
+    font-weight: bold;
+}
+
+.header1 {
+    color: grey;
+    font: 4.5vh Arial, sans-serif;
 }
 
 /* Create form */
 .create-form {
     margin-top: 10vh;
     background-color: #6b9dbb;
+}
+.form-2 {
+    margin-top: 6vh;
+}
+.fill-elem {
+}
+/*home.blade*/
+.profile-img {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.descri {
+    font: 3.5vh Arial, sans-serif;
+}
+
+.home-desc {
+    font: 2.5vh Arial, sans-serif;
+    color: black;
+}
+/*edit*/
+.file-image {
+    display: inline-block;
+    width: 30vw;
+}
+.fill-out {
+    display: flex;
+    margin-top: 8vh;
+    width: 70vw;
+
+}
+.fill-elem {
+    display: inline-block;
+}
+.fill-elem-text {
+    margin-right: 22.5vw;
+}
+.edit-h {
+    margin-bottom: 5vh;
 }

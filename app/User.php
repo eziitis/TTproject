@@ -27,6 +27,19 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created( function($user){
+            $profile = new \App\Profile;
+            $profile->user_id = $user->id;
+            $profile->description = 'Default descr';
+            $profile->image = 'profile/QHhArmq292icliMETBEPOCAtTyXCAwFbZKK6RUMk.png';
+            $profile->save();
+        });
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class)->orderBy('created_at','DESC');

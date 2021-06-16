@@ -2,9 +2,11 @@
 
 .logo1 {
     display: flex;
-
     width: 50vw;
     margin-top: 0.5vh;
+
+}
+.logo-cont {
 
 }
 .log-elem {
@@ -13,8 +15,14 @@
 .log-img {
     height: 5vh;
     margin-top: 0.5vh;
+    margin-left: 7vw;
+}
+.log-img1 {
+    height: 5vh;
 }
 .log-text {
     font-size: 4.5vh;
     margin-left: 3vw;
+    color: #0d3625;
+    font-weight: bold;
 }

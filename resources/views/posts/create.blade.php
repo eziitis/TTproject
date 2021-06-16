@@ -6,8 +6,12 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <br>
             <br>
+            <div class="row ">
+                <a class="btn btn-primary" href="{{ url('/profile/'. auth()->user()->id) }}">Back</a>
+            </div>
             <br>
-            <div class="row">
+            <br>
+            <div class="row edit-h">
                 <h1>
                     Add New game
                 </h1>
@@ -33,10 +37,10 @@
             </div>
 
             <br>
-            <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-                <label for="image" class="col-md-1 control-label">Main Image</label>
+            <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }} form-2 fill-out file-image" >
+                <label for="image" class="col-md-1 control-label fill-elem fill-elem-text">Main Image</label>
 
-                <input type="file" class="form-control" id="image" name="image">
+                <input type="file" class="form-control fill-elem fill-elem" id="image" name="image">
                 @if ($errors->has('image'))
 
                             <strong>{{ $errors->first('image') }}</strong>

@@ -10,17 +10,18 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ url('/css/barstyle.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{asset('css/style.css?v=').time()}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/barstyle.css?v=').time()}}">
 
     </head>
     <body>
         <div class="">
+            <div class="logo-cont">
                 <div class="logo1">
                     <div class="log-elem"><img class="log-img" src="/svg/logo.png" alt="game shop logo on a shield" ></div>
                     <div class="log-elem log-text">Game-Supply-Dock</div>
                 </div>
-
+            </div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -44,39 +45,43 @@
             <div class="main-wel">
                 <div class="nav-bar">
                     <div class="nb-elem">
-                        <a href="{{ url('/') }}">
+                        <a class="main-but" href="{{ url('/') }}">
                            Home
                         </a>
                     </div>
                     <div class="nb-elem">
                         @if (Route::has('login'))
                             @if (Auth::check())
-                               <a href="{{ url('/profile/'. auth()->user()->id) }}">
+                               <a class="main-but" href="{{ url('/profile/'. auth()->user()->id) }}">
                                    Profile
                                </a>
                             @else
-                               <a href="{{ url('/login') }}">
+                               <a class="main-but" href="{{ url('/login') }}">
                                    Profile
                                </a>
                             @endif
                         @endif
                     </div>
                     <div class="nb-elem">
-                        <a href="{{ url('/genres') }}">
-                          Genres
+                        <a class="main-but" href="{{ url('/genres') }}">
+                            Genres
                         </a>
                     </div>
                     <div class="nb-elem">
-                        Users
+                        <a class="main-but" href="{{ url('/users') }}">
+                            Users
+                        </a>
                     </div>
                     <div class="nb-elem">
-                        Contacts
+                        <a class="main-but" href="{{ url('/contacts') }}">
+                            Contacts
+                        </a>
                     </div>
                 </div>
 
                 <div class="new-content">
                     <div class="button-1">
-                        <h1>
+                        <h1 class="header1">
                             Newest Content this week:
                         </h1>
                     </div>
@@ -86,39 +91,61 @@
                         <div class="main-img">
                             <img class="main-cont-img" src="/svg/game-logos/game-logo1.png" alt="display of a nice box art for the game">
                         </div>
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                     <div class="main-cont-elem">
-                        <img class="main-cont-img" src="/svg/game-logos/game-logo2.png" alt="display of a nice box art for the game">
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-img">
+                            <img class="main-cont-img" src="/svg/game-logos/game-logo2.png" alt="display of a nice box art for the game">
+                        </div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                     <div class="main-cont-elem">
-                        <img class="main-cont-img" src="/svg/game-logos/game-logo3.png" alt="display of a nice box art for the game">
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-img">
+                            <img class="main-cont-img" src="/svg/game-logos/game-logo3.png" alt="display of a nice box art for the game">
+                        </div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                     <div class="main-cont-elem">
-                        <img class="main-cont-img" src="/svg/game-logos/game-logo4.png" alt="display of a nice box art for the game">
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-img">
+                            <img class="main-cont-img" src="/svg/game-logos/game-logo4.png" alt="display of a nice box art for the game">
+                        </div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                     <div class="main-cont-elem">
-                        <img class="main-cont-img" src="/svg/game-logos/game-logo5.png" alt="display of a nice box art for the game">
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-img">
+                            <img class="main-cont-img" src="/svg/game-logos/game-logo5.png" alt="display of a nice box art for the game">
+                        </div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                     <div class="main-cont-elem">
-                        <img class="main-cont-img" src="/svg/game-logos/game-logo6.png" alt="display of a nice box art for the game">
-                        <div>Slay The Spyre</div>
-                        <div>Fantasy, RPG</div>
-                        <div>Price: 65 $</div>
+                        <div class="main-img">
+                            <img class="main-cont-img" src="/svg/game-logos/game-logo6.png" alt="display of a nice box art for the game">
+                        </div>
+                        <div class="main-cont-text">
+                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">Fantasy, RPG</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        </div>
                     </div>
                 </div>
             </div>

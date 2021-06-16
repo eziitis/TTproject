@@ -12,6 +12,7 @@
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="{{asset('css/style.css?v=').time()}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/barstyle.css?v=').time()}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/profilestyle.css?v=').time()}}">
 
     </head>
     <body>
@@ -78,6 +79,18 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="new-content">
+                <div class="button-1">
+                    <h1 class="header1 user-h">
+                        Newest Users:
+                    </h1>
+                </div>
+            </div>
+            <div class="user-show">
+                @foreach($user->posts as $post)
+                    <div>{{$post->id}}</div>>
+                @endforeach
             </div>
         </div>
     </body>

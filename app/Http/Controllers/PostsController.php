@@ -101,4 +101,29 @@ class PostsController extends Controller
 
         return redirect('/profile/'. auth()->user()->id);
     }
+    public function show(\App\Post $post)
+    {
+        return view('posts.show',[
+            'post'=>$post,
+        ]);
+    }
+
+    public function destroy($post){
+        /*
+        Post::destroy($post);
+
+        Post::flash('message', 'Delete successfully!');
+        Post::flash('alert-class', 'alert-success');
+
+
+        return redirect()->route('/profile/'. auth()->user()->id);
+
+        dd($post);
+        $user = auth()->user();
+        $user->post->delete();
+        */
+        \App\Post::where('id', $post)->delete();
+
+        return redirect('/profile/'. auth()->user()->id);
+    }
 }
