@@ -1,4 +1,42 @@
 /*users*/
 .user-h {
-    margin-top: 13vh;
+    margin-top: 20vh;
+}
+.user-cont {
+    width: 90vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+    background-image: url("/background-images/main.png");
+}
+table {
+    margin-left: 5vw;
+    border-radius: 2%;
+}
+th,td {
+    background-color: lightblue;
+}
+
+table,th,td {
+    border: 3px ridge cornflowerblue;
+    border-radius: 2%;
+}
+.table-img {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+.table-text {
+    font-weight: bold;
+    color: #0d3625;
+}
+.table-head {
+    width: 250px;
+}
+.table-data {
+    text-align:center;
+}
+.table-a {
+    text-decoration: none;
 }

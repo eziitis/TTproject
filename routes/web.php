@@ -11,16 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'UserController@UserList');
 
 Route::get('/genres', function () {
     return view('genres');
 });
-Route::get('/users', function () {
-    return view('users');
-});
+Route::get('/users', 'UserController@ShowUserlist');
+
 Route::get('/contacts', function () {
     return view('contacts');
 });

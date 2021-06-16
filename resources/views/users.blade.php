@@ -73,24 +73,32 @@
                             Users
                         </a>
                     </div>
-                    <div class="nb-elem">
-                        <a class="main-but" href="{{ url('/contacts') }}">
-                            Contacts
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div class="new-content">
+            <div class="new-content user-h">
                 <div class="button-1">
-                    <h1 class="header1 user-h">
-                        Newest Users:
+                    <h1 class="header1">
+                        Users:
                     </h1>
                 </div>
             </div>
-            <div class="user-show">
-                @foreach($user->posts as $post)
-                    <div>{{$post->id}}</div>>
-                @endforeach
+            <div class="user-cont">
+                <div class="table1">
+                    <table class="user-table">
+                        <tr>
+                            <th></th>
+                            <th class="table-text table-head">Name</th>
+                            <th class="table-text table-head">Username</th>
+                        </tr>
+                        @foreach ($users as $user)
+                        <tr>
+                            <td><img class="table-img" src="/storage/{{$user->profile->image}}"></td>
+                            <td class="table-text table-data">{{$user->name}}</td>
+                            <td class="table-text table-data"><a class="table-a" href="/profile/{{$user->id}}">{{$user->username}}</a></td>
+                        </tr>
+                        @endforeach
+                    </table>
+                </div>
             </div>
         </div>
     </body>

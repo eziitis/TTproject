@@ -14,6 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css?v=').time()}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/barstyle.css?v=').time()}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/showstyle.css?v=').time()}}">
 </head>
 <body>
     <div id="app">

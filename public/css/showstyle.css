@@ -1,0 +1,35 @@
+/*show*/
+.show-button {
+    margin-top: 6vh;
+    margin-left: 0.8vw;
+    margin-bottom: 4vh;
+}
+.show-img {
+    max-height: 50vh;
+    max-width: 40vw;
+}
+
+.del-but {
+    margin-top: 3vh;
+    height: 5vh;
+    font-weight: bold;
+    position: relative;
+    left: 50vw;
+}
+.show-flex {
+    display: flex;
+}
+.show-item {
+    display: inline-block;
+}
+.show-text {
+    margin-top: 2vh;
+    margin-left: 4vw;
+    font: 3vh Arial, sans-serif;
+}
+.tt2 {
+    margin-top: 6vh;
+}
+.show-tit {
+    font-weight: bolder;
+}

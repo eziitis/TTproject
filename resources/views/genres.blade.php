@@ -72,11 +72,6 @@
                             Users
                         </a>
                     </div>
-                    <div class="nb-elem">
-                        <a class="main-but" href="{{ url('/contacts') }}">
-                            Contacts
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

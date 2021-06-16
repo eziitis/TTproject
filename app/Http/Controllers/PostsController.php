@@ -85,10 +85,14 @@ class PostsController extends Controller
             'image'=> $imagePath,
         ]);
         dd(request()->all());
+        return redirect('/profile/'. auth()->user()->id);
         */
         $this->validate($request, [
             'caption' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'title' => 'required',
+            'price' => 'required',
+
         ]);
 
         $imagePath = request('image')->store('uploads','public');
@@ -97,6 +101,8 @@ class PostsController extends Controller
         $apt->user_id = auth()->user()->id;
         $apt->caption = $request->input('caption');
         $apt->image = $imagePath;
+        $apt->title = $request->input('title');
+        $apt->price = $request->input('price');
         $apt->save();
 
         return redirect('/profile/'. auth()->user()->id);

@@ -16,7 +16,39 @@
                     Add New game
                 </h1>
             </div>
-            <div class="form-group{{ $errors->has('caption') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+
+                <label for="title" class="col-md-4 control-label">Game Title</label>
+
+                <div class="col-md-6">
+                    <input id="title"
+                           type="text"
+                           class="form-control"
+                           name="title"
+                           value="{{ old('title') }}"
+                           autocomplete="title" autofocus>
+
+                    @if ($errors->has('title'))
+                        <span class="help-block">
+                                <strong>{{ $errors->first('title') }}</strong>
+                            </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }} create-elem">
+                <label for="price" class="col-md-4 control-label">Price</label>
+
+                <div class="col-md-6">
+                    <input id="price" type="price" class="form-control" name="price" value="{{ old('price') }}" required>
+
+                    @if ($errors->has('price'))
+                        <span class="help-block">
+                                            <strong>{{ $errors->first('price') }}</strong>
+                                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('caption') ? ' has-error' : '' }} create-elem">
 
                 <label for="caption" class="col-md-4 control-label">Game caption</label>
 

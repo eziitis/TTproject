@@ -100,6 +100,10 @@ html, body {
     margin: auto;
     display: block;
 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
 }
 .main-img {
     width: 15vw;
@@ -111,6 +115,7 @@ html, body {
 .main-cont-text {
     border-top: 0.5vw ridge deepskyblue;
     background-color: lightblue;
+    text-align:center;
 }
 .main-text {
     font-weight: bold;
@@ -178,4 +183,8 @@ html, body {
 }
 .edit-h {
     margin-bottom: 5vh;
+}
+.under-c {
+    margin-left: 10vw;
+    margin-top: 10vh;
 }

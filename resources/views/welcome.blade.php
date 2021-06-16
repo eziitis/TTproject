@@ -72,11 +72,6 @@
                             Users
                         </a>
                     </div>
-                    <div class="nb-elem">
-                        <a class="main-but" href="{{ url('/contacts') }}">
-                            Contacts
-                        </a>
-                    </div>
                 </div>
 
                 <div class="new-content">
@@ -87,67 +82,19 @@
                     </div>
                 </div>
                 <div class="main-cont">
+                    @foreach($users as $post)
                     <div class="main-cont-elem">
                         <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo1.png" alt="display of a nice box art for the game">
+                            <img class="main-cont-img" src="/storage/{{ $post->image }}" alt="display of a nice box art for the game">
                         </div>
                         <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
+                            <div class="main-text italic">{{$post->title}}</div>
                             <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">{{$post->price}}</span> $</div>
                         </div>
                     </div>
-                    <div class="main-cont-elem">
-                        <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo2.png" alt="display of a nice box art for the game">
-                        </div>
-                        <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
-                            <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
-                        </div>
-                    </div>
-                    <div class="main-cont-elem">
-                        <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo3.png" alt="display of a nice box art for the game">
-                        </div>
-                        <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
-                            <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
-                        </div>
-                    </div>
-                    <div class="main-cont-elem">
-                        <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo4.png" alt="display of a nice box art for the game">
-                        </div>
-                        <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
-                            <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
-                        </div>
-                    </div>
-                    <div class="main-cont-elem">
-                        <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo5.png" alt="display of a nice box art for the game">
-                        </div>
-                        <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
-                            <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
-                        </div>
-                    </div>
-                    <div class="main-cont-elem">
-                        <div class="main-img">
-                            <img class="main-cont-img" src="/svg/game-logos/game-logo6.png" alt="display of a nice box art for the game">
-                        </div>
-                        <div class="main-cont-text">
-                            <div class="main-text italic">Slay The Spyre</div>
-                            <div class="main-text italic">Fantasy, RPG</div>
-                            <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                <div>
             </div>
         </div>
     </body>

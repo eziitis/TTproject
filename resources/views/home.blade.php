@@ -46,9 +46,9 @@
                         <img class="main-cont-img" src="/storage/{{ $post->image }}" alt="display of a nice box art for the game">
                     </div>
                     <div class="main-cont-text">
-                        <div class="main-text italic">Slay The Spyre</div>
+                        <div class="main-text italic">{{$post->title}}</div>
                         <div class="main-text italic">Fantasy, RPG</div>
-                        <div class="main-text"><span class="bb">Price:</span> <span class="italic">65</span> $</div>
+                        <div class="main-text"><span class="bb">Price:</span> <span class="italic">{{$post->price}}</span> $</div>
                     </div>
                 </div>
             </a>
