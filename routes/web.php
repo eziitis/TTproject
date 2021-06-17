@@ -13,9 +13,6 @@
 
 Route::get('/', 'UserController@UserList');
 
-Route::get('/genres', function () {
-    return view('genres');
-});
 Route::get('/users', 'UserController@ShowUserlist');
 
 Route::get('/contacts', function () {
@@ -23,6 +20,13 @@ Route::get('/contacts', function () {
 });
 
 Auth::routes();
+
+Route::get('/e/create', 'ExistsController@create');
+Route::post('/e', 'ExistsController@store');
+
+Route::get('/g/create', 'GenreController@create');
+Route::post('/g', 'GenreController@store');
+Route::get('/genres', 'GenreController@GenreList');
 
 Route::get('/p/create', 'PostsController@create');
 

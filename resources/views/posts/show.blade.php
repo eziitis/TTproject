@@ -14,6 +14,8 @@
                 <p class="show-text"><span class="show-tit">Title: </span>{{$post->title}}</p>
                 <p class="show-text tt2"><span class="show-tit">Captions: </span>{{$post->caption}}</p>
                 <p class="show-text tt2"><span class="show-tit">Price: </span>{{$post->price}}</p>
+                <a class="show-text btn btn-primary" href="/e/create">Add Genres</a>
+                <p class="show-text tt1"><span class="show-tit">Genres: </span></p>
             </div>
         </div>
     </div>

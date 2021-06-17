@@ -10,4 +10,8 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function isPart()
+    {
+        return $this->belongsToMany(Genre::class);
+    }
 }
